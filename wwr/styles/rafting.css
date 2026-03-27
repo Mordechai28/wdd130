@@ -23,8 +23,8 @@ footer {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
 }
 
@@ -40,6 +40,16 @@ section,
 article {
     margin: 16px;
     padding: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
 }
 
 .socialmedia a {
@@ -92,4 +102,21 @@ h2 {
     text-align: center;
     background-color: var(--accent1-color);
     color: #fff;
+}
+
+.threes {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.figure {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
 }
