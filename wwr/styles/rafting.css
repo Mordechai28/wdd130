@@ -1,122 +1,222 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-:root {
-    --primary-color: #055a05;
-    /* forest green */
-    --accent1-color: #264653;
-    /* white */
-    --accent2-color: #fff;
-    /* light golden yellow */
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
+ :root {
+     --primary-color: #055a05;
+     /* forest green */
+     --accent1-color: #264653;
+     /* white */
+     --accent2-color: #fff;
+     /* light golden yellow */
+     --text-color: #111;
+     --heading-font: "Times New Roman", "Georgia", serif;
+     --body-font: Arial, Helvetica, sans-serif;
+ }
 
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-}
+ header,
+ main,
+ footer {
+     width: 840px;
+     margin: 0 auto;
+ }
 
-header {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    align-items: center;
-}
+ header {
+     display: grid;
+     grid-template-columns: 1fr 3fr 1fr;
+     align-items: center;
+ }
 
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
+ h1,
+ h2 {
+     font-family: var(--heading-font);
+     color: var(--primary-color);
+ }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
+ nav,
+ p,
+ section,
+ article {
+     margin: 16px;
+     padding: 8px;
+ }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
+ nav ul {
+     list-style: none;
+     display: flex;
+     justify-content: space-between;
+ }
 
-nav a {
-    text-decoration: none;
-}
+ nav a {
+     text-decoration: none;
+ }
 
-.socialmedia a {
-    text-decoration: none;
-}
+ .socialmedia a {
+     text-decoration: none;
+ }
 
-.hero {
-    position: relative;
-}
+ .hero {
+     position: relative;
+ }
 
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
+ .hero img {
+     display: block;
+     width: 100%;
+     height: auto;
+ }
 
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: var(--accent2-color);
-    /* white text - make sure there is enough contrast with the background-color*/
-}
+ h1 {
+     position: absolute;
+     top: 20px;
+     width: 100%;
+     padding: 16px;
+     text-align: center;
+     opacity: 0.7;
+     background-color: var(--accent1-color);
+     color: var(--accent2-color);
+     /* white text - make sure there is enough contrast with the background-color*/
+ }
 
-.hero article {
-    background-color: var(--accent1-color);
-    color: var(--accent2-color);
-    position: absolute;
-    bottom: 2rem;
-    opacity: 0.7;
-    font-family: var(--body-font);
-}
+ .hero article {
+     background-color: var(--accent1-color);
+     color: var(--accent2-color);
+     position: absolute;
+     bottom: 2rem;
+     opacity: 0.7;
+     font-family: var(--body-font);
+ }
 
-.hero article img {
-    float: right;
-    width: 100px;
-    margin-left: 10px;
-}
+ .hero article img {
+     float: right;
+     width: 100px;
+     margin-left: 10px;
+ }
 
-.hero article p {
-    color: #fff;
-}
+ .hero article p {
+     color: #fff;
+ }
 
-h2 {
-    padding: 1rem;
-    text-align: center;
-    background-color: var(--accent1-color);
-    color: #fff;
-}
+ h2 {
+     padding: 1rem;
+     text-align: center;
+     background-color: var(--accent1-color);
+     color: #fff;
+ }
 
-.threes {
-    display: flex;
-    margin-top: 2rem;
-}
+ .threes {
+     display: flex;
+     margin-top: 2rem;
+ }
 
-.figure {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-around;
-}
+ .figure {
+     margin-top: 2rem;
+     display: flex;
+     justify-content: space-around;
+ }
 
-footer {
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-}
+ footer {
+     text-align: left;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ /* Contact Page Styles */
+
+ label,
+ input,
+ button,
+ select,
+ textarea {
+     font-family: Roboto, Arial, sans-serif;
+ }
+
+ .address {
+     text-align: center;
+     margin: 20px auto;
+ }
+
+ .address-title {
+     font-size: 2.5rem;
+ }
+
+ .address p {
+     margin: 0;
+ }
+
+ .embededmap-contact {
+     display: flex;
+     justify-content: center;
+     gap: 40px;
+     padding: 20px;
+ }
+
+ /* Form Styling */
+
+ .contact {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     width: 350px;
+ }
+
+ .form-item {
+     display: grid;
+     align-items: center;
+ }
+
+ .column1 {
+     grid-template-columns: 3fr 1fr;
+     margin: 0.5rem 0;
+ }
+
+ .column2 {
+     grid-template-columns: 1fr 2fr;
+ }
+
+ input,
+ textarea {
+     padding: 8px;
+     border: 1px solid #999;
+     border-radius: 4px;
+ }
+
+ input[type="checkbox"] {
+     vertical-align: bottom;
+ }
+
+ /* 
+textarea {
+    height: 80px;
+} */
+
+ button {
+     padding: 10px;
+     background-color: navy;
+     color: #fff;
+     border: 1px solid var(--text-color);
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ .service {
+     margin: 30px;
+     text-align: center;
+ }
+
+ .service-title {
+     font-size: 24px;
+     margin-bottom: 20px;
+     background-color: transparent;
+     color: var(--text-color);
+ }
+
+ .employee-profiles {
+     display: flex;
+     justify-content: space-around;
+ }
+
+ .employee {
+     text-align: center;
+ }
