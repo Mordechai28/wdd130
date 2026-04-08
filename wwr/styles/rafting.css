@@ -9,9 +9,11 @@
      /* forest green */
      --accent1-color: #264653;
      /* white */
-     --accent2-color: #fff;
+     --transparent: #00000000;
+     --accent2-color: #ffffff;
      /* light golden yellow */
-     --text-color: #111;
+     --text-color: #111111;
+     --bg-overlay: rgba(38, 70, 83, 0.7);
      --heading-font: "Times New Roman", "Georgia", serif;
      --body-font: Arial, Helvetica, sans-serif;
  }
@@ -67,14 +69,14 @@
      height: auto;
  }
 
- .hero-title {
+ .hero h1 {
      position: absolute;
      top: 20px;
+     left: 0;
      width: 100%;
      padding: 16px;
      text-align: center;
-     opacity: 0.7;
-     background-color: var(--accent1-color);
+     background-color: var(--bg-overlay);
      color: var(--accent2-color);
      /* white text - make sure there is enough contrast with the background-color*/
  }
@@ -129,7 +131,7 @@
  button,
  select,
  textarea {
-     font-family: Roboto, Arial, sans-serif;
+     font-family: var(--body-font);
  }
 
  .address {
@@ -137,7 +139,7 @@
      margin: 20px auto;
  }
 
- .address-title {
+ .address h1 {
      font-size: 2.5rem;
      color: var(--accent1-color);
  }
@@ -168,12 +170,14 @@
  }
 
  .column1 {
+     display: grid;
      grid-template-columns: 1fr 3fr;
      margin: 0.5rem 0;
      gap: 10px;
  }
 
  .column2 {
+     display: grid;
      grid-template-columns: 1fr 2fr;
  }
 
@@ -188,14 +192,48 @@
      vertical-align: bottom;
  }
 
- /* 
-textarea {
-    height: 80px;
-} */
+ /* Container for the checkbox and its label */
+ .column3 {
+     display: block;
+     /* Ensure the main container stays standard */
+ }
+
+ /* This targets the specific checkbox-label group */
+ .column3 input[type="checkbox"] {
+     width: auto;
+     /* Prevents the checkbox from stretching */
+     margin-right: 10px;
+     /* Space between box and text */
+     cursor: pointer;
+ }
+
+ .column3 label[for="subscribe"] {
+     display: inline-flex;
+     /* Keeps the label and checkbox on one line */
+     align-items: center;
+     /* Centers the box vertically with the text */
+     /* margin-top: 15px; */
+     /* Space above the subscription line */
+     cursor: pointer;
+ }
+
+ /* Keep the button and textarea looking normal */
+ .column3 textarea {
+     display: block;
+     width: 100%;
+     margin-bottom: 10px;
+ }
+
+ .column3 button {
+     display: block;
+     margin-top: 10px;
+     width: 100%;
+     /* Or change to auto if you want it smaller */
+ }
 
  button {
      padding: 10px;
-     background-color: navy;
+     background-color: var(--accent1-color);
      color: var(--accent2-color);
      border: 1px solid var(--text-color);
      border-radius: 4px;
@@ -207,10 +245,10 @@ textarea {
      text-align: center;
  }
 
- .service-title {
+ .service h2 {
      font-size: 24px;
      margin-bottom: 20px;
-     background-color: transparent;
+     background-color: var(--transparent);
      color: var(--text-color);
  }
 
